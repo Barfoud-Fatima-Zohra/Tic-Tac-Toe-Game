@@ -1,91 +1,93 @@
-# Tic-Tac-Toe avec l'Algorithme Minimax
+# Tic-Tac-Toe with the Minimax Algorithm
 
-
-Ce projet est un jeu de Tic-Tac-Toe développé avec Next.js, TypeScript et React, intégrant l'algorithme Minimax pour permettre à l'ordinateur de jouer de manière optimale. Le jeu est conçu pour permettre à un utilisateur humain de jouer contre un ordinateur (le "Robot").
+This project is a Tic-Tac-Toe game built with Next.js, TypeScript, and React, featuring the Minimax algorithm so the computer can play optimally. The game is designed for a human player to compete against a computer (the "Robot").
 
 ![Main Interface](/assets/tic-tac-toe.png)
 
-## Fonctionnalités
+## Features
 
-- **Interface Utilisateur**: Une interface utilisateur moderne et intuitive avec un plateau de jeu 3x3
-- **Tour par Tour**: Les joueurs alternent leurs tours, l'humain jouant avec "X" et l'ordinateur avec "O"
-- **Algorithme Minimax**: Utilisé pour calculer le meilleur coup possible pour l'ordinateur afin de minimiser la chance de défaite et maximiser la chance de victoire
-- **Indication de Fin de Jeu**: Un message s'affiche à la fin de chaque partie pour indiquer si l'humain ou le robot a gagné, ou s'il y a égalité
-- **Réinitialisation du Jeu**: Un bouton "Reset" permet de réinitialiser le jeu à tout moment
-- **Interface Responsive**: Design adaptatif qui fonctionne sur desktop et mobile
+- **User Interface**: A modern, intuitive user interface with a 3x3 game board
+- **Turn-based gameplay**: Players alternate turns, with the human as "X" and the computer as "O"
+- **Minimax Algorithm**: Used to calculate the best possible move for the computer to minimize its chances of losing and maximize its chances of winning
+- **Game End Notification**: A message appears at the end of each game indicating if the human or the robot has won, or if there’s a draw
+- **Game Reset**: A "Reset" button lets you restart the game at any time
+- **Responsive Interface**: Adaptive design works on both desktop and mobile
 
+## Explanation of the Minimax Algorithm
 
-## Explication de l'Algorithme Minimax
+The Minimax algorithm is a recursive method used in game theory and artificial intelligence to determine the best move to make. Here’s how it works:
 
-L'algorithme Minimax est une méthode récursive utilisée dans la théorie des jeux et l'intelligence artificielle pour déterminer le meilleur coup à jouer. Voici comment il fonctionne :
+### Evaluating Moves
 
-### Évaluation des Coups
-L'algorithme évalue tous les coups possibles disponibles sur le plateau.
+The algorithm considers all possible moves available on the board.
 
-### Maximisation et Minimisation
-- Si c'est le tour de l'ordinateur (joueur maximisant), il choisit le coup qui maximise son score
-- Si c'est le tour de l'humain (joueur minimisant), il choisit le coup qui minimise le score de l'ordinateur
+### Maximizing and Minimizing
 
-### Fonction de Score
-- Si l'ordinateur gagne, le score est positif (ex. +10)
-- Si l'humain gagne, le score est négatif (ex. -10)
-- Si c'est une égalité, le score est neutre (0)
+- If it’s the computer’s turn (maximizing player), it chooses the move that maximizes its score
+- If it’s the human’s turn (minimizing player), it chooses the move that minimizes the computer’s score
 
-### Récursivité
-L'algorithme continue d'explorer les coups possibles de manière récursive jusqu'à atteindre une condition de fin de partie (victoire, défaite, égalité).
+### Scoring Function
 
-L'objectif de l'algorithme Minimax est de garantir que l'ordinateur joue de manière optimale, minimisant les pertes face à un adversaire parfait.
+- If the computer wins, the score is positive (e.g., +10)
+- If the human wins, the score is negative (e.g., -10)
+- If it’s a draw, the score is neutral (0)
 
-## Installation et Exécution
+### Recursion
 
-### Prérequis
-- Node.js (version 18 ou supérieure)
-- npm, yarn, pnpm ou bun
+The algorithm keeps exploring possible moves recursively until it reaches a game-ending condition (win, loss, or draw).
 
-### Étapes de Démarrage
+The goal of the Minimax algorithm is to ensure the computer plays optimally, minimizing losses against a perfect opponent.
 
-1. **Cloner le projet**
+## Installation and Running
+
+### Prerequisites
+
+- Node.js (version 18 or higher)
+- npm, yarn, pnpm, or bun
+
+### Getting Started
+
+1. **Clone the repository**
    ```bash
-   git clone <url-du-repo>
+   git clone <repo-url>
    cd tic-tac-toe_game
    ```
 
-2. **Installer les dépendances**
+2. **Install dependencies**
    ```bash
    npm install
-   # ou
+   # or
    yarn install
-   # ou
+   # or
    pnpm install
-   # ou
+   # or
    bun install
    ```
 
-3. **Lancer le serveur de développement**
-```bash
-npm run dev
-   # ou
-yarn dev
-   # ou
-pnpm dev
-   # ou
-bun dev
-```
+3. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
 
-4. **Ouvrir l'application**
-   Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur pour voir le résultat.
+4. **Open the application**
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the result.
 
-### Scripts Disponibles
+### Available Scripts
 
-- `npm run dev` - Lance le serveur de développement
-- `npm run build` - Construit l'application pour la production
-- `npm run start` - Lance l'application en mode production
-- `npm run lint` - Vérifie le code avec ESLint
+- `npm run dev` - Starts the development server
+- `npm run build` - Builds the app for production
+- `npm run start` - Starts the app in production mode
+- `npm run lint` - Lints the code with ESLint
 
+## Technologies Used
 
-## Technologies Utilisées
-
-- **Next.js 14** - Framework React pour la production
-- **TypeScript** - Langage de programmation typé
-- **React** - Bibliothèque pour l'interface utilisateur
-- **Tailwind CSS** - Framework CSS pour le styling
+- **Next.js 14** - React framework for production
+- **TypeScript** - Typed programming language
+- **React** - UI library
+- **Tailwind CSS** - CSS framework for styling
